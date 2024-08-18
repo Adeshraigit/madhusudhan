@@ -6,10 +6,13 @@ import { twMerge } from "tailwind-merge"
 import Image from "next/image";
 import Choose from "@/components/choose";
 import InfiniteImageScroll from "@/components/customers";
+import { cn } from "@/utils/cn";
+import Hero from "@/components/ripple";
 
 export default function Home() {
   return (
    <main>
+    <Hero/>
     <AppleCardsCarouselDemo/>
     <DirectionAwareHoverDemo/>
     <div className="max-w-2xl mx-auto antialiased pt-4 relative">

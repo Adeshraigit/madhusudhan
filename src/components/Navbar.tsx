@@ -2,7 +2,8 @@ import React from 'react'
 
 function Navbar() {
   return (
-    <div className="navbar bg-base-100">
+    <div className='flex justify-center' >
+     <div className="navbar mt-5 rounded-3xl w-[85%] bg-[#1E90FF] text-white  ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -37,23 +38,24 @@ function Navbar() {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
+      <li><a>Home</a></li>
+      <li><a>Company Profile</a></li>
       <li>
         <details>
-          <summary>Parent</summary>
+          <summary>Our Products</summary>
           <ul className="p-2">
             <li><a>Submenu 1</a></li>
             <li><a>Submenu 2</a></li>
           </ul>
         </details>
       </li>
-      <li><a>Item 3</a></li>
+      <li><a>Application</a></li>
+      <li><a>Video</a></li>
+      <li><a>Contact Us</a></li>
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
-  </div>
-</div>
+     </div>
+   </div>
   )
 }
 
