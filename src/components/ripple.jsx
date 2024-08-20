@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <div className="ripple-hero bg-blue-400 flex items-center justify-center h-[80vh] relative m-10 ml-0 mr-0">
       <div className="text-center text-white p-6">
-        <h1 className="text-4xl md:text-6xl font-bold">Welcome to Madhusudan Aqua Industries</h1>
+        <h1 className="text-4xl md:text-6xl font-bold">Madhusudan Aqua Industries</h1>
       </div>
     </div>
   );

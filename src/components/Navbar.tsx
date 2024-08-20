@@ -34,24 +34,16 @@ function Navbar() {
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">Madhushudan logo</a>
+    <a href='/' className="btn btn-ghost text-xl">Madhushudan logo</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Home</a></li>
-      <li><a>Company Profile</a></li>
-      <li>
-        <details>
-          <summary>Our Products</summary>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a>Application</a></li>
-      <li><a>Video</a></li>
-      <li><a>Contact Us</a></li>
+      <li><a href='/' >Home</a></li>
+      <li><a href='/profile' >Company Profile</a></li>
+      <li><a href="/products">Our Products</a></li>
+      <li><a href='/application'>Application</a></li>
+      <li><a href='/videos' >Video</a></li>
+      <li><a href='/contact' >Contact Us</a></li>
     </ul>
   </div>
      </div>

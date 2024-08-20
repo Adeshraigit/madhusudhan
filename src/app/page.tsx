@@ -15,7 +15,7 @@ export default function Home() {
     <Hero/>
     <AppleCardsCarouselDemo/>
     <DirectionAwareHoverDemo/>
-    <div className="max-w-2xl mx-auto antialiased pt-4 relative">
+    {/* <div className="max-w-2xl mx-auto antialiased pt-4 relative">
         {dummyContent.map((item, index) => (
           <div key={`content-${index}`} className="mb-10">
             <p className={twMerge("text-2xl mb-4")}>
@@ -39,6 +39,30 @@ export default function Home() {
           </button>
           </div>
         ))}
+    </div> */}
+     <div className="max-w-2xl mx-auto antialiased pt-4 relative">
+      {dummyContent.map((item, index) => (
+        <div key={`content-${index}`} className="mb-12 p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <h2 className="text-3xl font-semibold mb-4 text-[#1E90FF]">{item.title}</h2>
+          
+          <div className="text-md prose prose-sm dark:prose-invert">
+            {item?.image && (
+              <Image
+                src={item.image}
+                alt="content image"
+                height={500}
+                width={500}
+                className="rounded-lg mb-6 object-cover"
+              />
+            )}
+            <p>{item.description}</p>
+          </div>
+          
+          <button className="mt-4 shadow-md hover:shadow-lg hover:bg-[#1E90FF] bg-[#0070f3] rounded-md text-white font-semibold px-6 py-3 transition-colors duration-300 ease-in-out">
+            <a href="/about">READ MORE</a>
+          </button>
+        </div>
+      ))}
     </div>
     <Choose/>
     <InfiniteImageScroll/>

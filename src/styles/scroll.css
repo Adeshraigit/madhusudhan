@@ -1,0 +1,19 @@
+.image-container {
+    display: inline-flex;
+    white-space: nowrap;
+    will-change: transform;
+  }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-scroll {
+    animation: scroll linear infinite;
+  }
+  
