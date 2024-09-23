@@ -8,6 +8,7 @@ import Choose from "@/components/choose";
 import InfiniteImageScroll from "@/components/customers";
 import { cn } from "@/utils/cn";
 import Hero from "@/components/ripple";
+import { GlobeDemo } from "@/components/globedemo";
 
 export default function Home() {
   return (

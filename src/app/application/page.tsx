@@ -1,8 +1,10 @@
+import { GlobeDemo } from '@/components/globedemo'
 import React from 'react'
 
 function page() {
   return (
-    <div>page</div>
+    <div>page
+    </div>
   )
 }
 
