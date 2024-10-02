@@ -6,6 +6,7 @@ import Image from "next/image";
 import Choose from "@/components/choose";
 import InfiniteImageScroll from "@/components/customers";
 import Hero from "@/components/ripple";
+import "./globals.css";
 
 export default function Home() {
   return (

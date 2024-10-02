@@ -1,6 +1,5 @@
-// pages/index.js
 import { useEffect } from 'react';
-import 'tailwindcss/tailwind.css';
+// import 'tailwindcss/tailwind.css';
 
 export default function Home() {
   useEffect(() => {
