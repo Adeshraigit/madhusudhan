@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 
-function page() {
+function Page() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -113,4 +113,4 @@ function page() {
   )
 }
 
-export default page
+export default Page
