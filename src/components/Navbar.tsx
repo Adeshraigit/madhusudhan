@@ -1,9 +1,10 @@
+import Image from 'next/image'
 import React from 'react'
 
 function Navbar() {
   return (
     <div className='flex justify-center' >
-     <div className="navbar mt-5 rounded-3xl w-[85%] bg-[#1E90FF] text-white  ">
+     <div className="navbar mt-5 rounded-3xl w-[85%] text-[#1E90FF] bg-white  ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -23,18 +24,17 @@ function Navbar() {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
-        <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li>
-        <li><a>Item 3</a></li>
+        <li><a href='/' >Home</a></li>
+        <li><a href='/profile' >Company Profile</a></li>
+        <li><a href="/products">Our Products</a></li>
+        <li><a href='/application'>Application</a></li>
+        <li><a href='/videos' >Video</a></li>
+        <li><a href='/contact' >Contact Us</a></li>
       </ul>
     </div>
-    <a href='/' className="btn btn-ghost text-xl">Madhushudan logo</a>
+    <a href='/' className=" btn btn-ghost text-xl">
+    <Image src="/logo.png" alt="logo" width={150} height={150} />
+    </a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

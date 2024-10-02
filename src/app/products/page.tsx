@@ -37,7 +37,12 @@ const products: Product[] = [
 export default function Products() {
   return (
     <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-extrabold tracking-tight text-gray-900">Products</h1>
+      
+      <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg shadow-lg p-10 mb-12">
+        <h1 className="text-5xl font-bold text-center mb-4">
+          Products
+        </h1>
+      </div>
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {products.map((product) => (
           <a href={product.url} key={product.id} className="">
@@ -58,6 +63,21 @@ export default function Products() {
           </a>
         ))}
       </div>
+      {/* Call to Action */}
+    <section className="text-center py-12">
+      <h3 className="text-3xl font-bold mb-4 text-blue-600">
+        Ready to Find Your Perfect Water Solution?
+      </h3>
+      <p className="text-lg text-gray-600 mb-8">
+        Contact Madhusudan Aqua Industries today and let us help you with our innovative water treatment solutions.
+      </p>
+      <button className="px-8 py-3 bg-blue-600 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transition-colors">
+        <a href="/contact">
+        Get In Touch
+        </a>
+      </button>
+    </section>
     </div>
+    
   );
 }

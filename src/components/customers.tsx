@@ -59,12 +59,11 @@ import { useEffect, useRef } from 'react';
 const InfiniteHorizontalImageScroll: React.FC = () => {
   // Example image URLs
   const images: string[] = [
-    "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=3556&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=3556&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1486611483939-d7c7e6b1cc9d?q=80&w=3556&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1534352154594-0917a72caa79?q=80&w=3556&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=3556&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1568454537842-b1dd9c4df4e7?q=80&w=3556&auto=format&fit=crop"
+    "/rcb.png",
+    "Mc.png",
+    "/bailley.jpg",
+    "bisleri.png",
+    "water.png",
   ];
 
   const scrollRef = useRef<HTMLDivElement | null>(null);
