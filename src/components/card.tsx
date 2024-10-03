@@ -22,7 +22,7 @@ export function DirectionAwareHoverDemo() {
     {imageUrls.map((imageUrl, index) => (
       <div key={index} className="h-[25rem] relative flex items-center justify-center">
         <DirectionAwareHover imageUrl={imageUrl}>
-          <p className="font-bold text-xl">Machine</p>
+          <h3 className="font-bold text-xl">Machine</h3>
         </DirectionAwareHover>
       </div>
     ))}

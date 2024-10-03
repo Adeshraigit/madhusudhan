@@ -1,54 +1,69 @@
-import Image from 'next/image'
-import React from 'react'
+"use client";
+import Image from 'next/image';
+import React, { useState } from 'react';
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div className='flex justify-center' >
-     <div className="navbar mt-5 rounded-3xl w-[85%] text-[#1E90FF] bg-white  ">
-  <div className="navbar-start">
-    <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h8m-8 6h16" />
-        </svg>
+    <nav className="w-full bg-white shadow-lg">
+      <div className="container mx-auto flex justify-between items-center py-4 px-6">
+        
+        {/* Logo Section */}
+        <a href="/" className="flex items-center">
+          <Image src="/logo.png" alt="logo" width={150} height={50} />
+          {/* <span className="ml-3 text-3xl font-bold text-blue-500 tracking-wide">YourBrand</span> */}
+        </a>
+        
+        {/* Mobile Menu Button */}
+        <div className="lg:hidden">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="focus:outline-none"
+            aria-label="Toggle Menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8 text-gray-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d={menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-16 6h16"}
+              />
+            </svg>
+          </button>
+        </div>
+
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex space-x-10 items-center">
+          <a href="/" className="text-lg font-medium text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out">Home</a>
+          <a href="/profile" className="text-lg font-medium text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out">Company Profile</a>
+          <a href="/products" className="text-lg font-medium text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out">Our Products</a>
+          <a href="/application" className="text-lg font-medium text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out">Application</a>
+          <a href="/videos" className="text-lg font-medium text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out">Videos</a>
+          <a href="/contact" className="text-lg font-medium text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out">Contact Us</a>
+        </div>
+
       </div>
-      <ul
-        tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li><a href='/' >Home</a></li>
-        <li><a href='/profile' >Company Profile</a></li>
-        <li><a href="/products">Our Products</a></li>
-        <li><a href='/application'>Application</a></li>
-        <li><a href='/videos' >Video</a></li>
-        <li><a href='/contact' >Contact Us</a></li>
-      </ul>
-    </div>
-    <a href='/' className=" btn btn-ghost text-xl">
-    <Image src="/logo.png" alt="logo" width={150} height={150} />
-    </a>
-  </div>
-  <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a href='/' >Home</a></li>
-      <li><a href='/profile' >Company Profile</a></li>
-      <li><a href="/products">Our Products</a></li>
-      <li><a href='/application'>Application</a></li>
-      <li><a href='/videos' >Video</a></li>
-      <li><a href='/contact' >Contact Us</a></li>
-    </ul>
-  </div>
-     </div>
-   </div>
-  )
+
+      {/* Mobile Menu Dropdown */}
+      {menuOpen && (
+        <div className="lg:hidden">
+          <ul className="flex flex-col space-y-4 items-center mt-4 pb-4">
+            <li><a href="/" className="text-lg font-medium text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out">Home</a></li>
+            <li><a href="/profile" className="text-lg font-medium text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out">Company Profile</a></li>
+            <li><a href="/products" className="text-lg font-medium text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out">Our Products</a></li>
+            <li><a href="/application" className="text-lg font-medium text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out">Application</a></li>
+            <li><a href="/videos" className="text-lg font-medium text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out">Videos</a></li>
+            <li><a href="/contact" className="text-lg font-medium text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out">Contact Us</a></li>
+          </ul>
+        </div>
+      )}
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;

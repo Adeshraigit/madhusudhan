@@ -1,5 +1,4 @@
-'use client'
-
+"use client"
 import { AppleCardsCarouselDemo } from "@/components/carasoul";
 import { DirectionAwareHoverDemo } from "@/components/card";
 import Image from "next/image";
@@ -7,11 +6,17 @@ import Choose from "@/components/choose";
 import InfiniteImageScroll from "@/components/customers";
 import Hero from "@/components/ripple";
 import "./globals.css";
+import Spline from '@splinetool/react-spline/next';
 
 export default function Home() {
   return (
    <main>
-    <Hero/>
+     <div className=" w-[100vw] h-[80vh] relative m-10 ml-0 mr-0">
+    <Spline
+        scene="https://prod.spline.design/NE8vz3jVCjPutAYR/scene.splinecode" 
+      />
+      </div>
+    {/* <Hero/> */}
     <AppleCardsCarouselDemo/>
     <DirectionAwareHoverDemo/>
      <div className="max-w-2xl mx-auto antialiased pt-4 relative">
@@ -28,9 +33,8 @@ export default function Home() {
                 className="rounded-lg mb-6 object-cover"
               />
             )}
-            <p>{item.description}</p>
+            <div>{item.description}</div>
           </div>
-          
           <button className="mt-4 shadow-md hover:shadow-lg hover:bg-[#1E90FF] bg-[#0070f3] rounded-md text-white font-semibold px-6 py-3 transition-colors duration-300 ease-in-out">
             <a href="/about">READ MORE</a>
           </button>

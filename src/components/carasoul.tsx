@@ -55,25 +55,25 @@ const data = [
     category: "",
     title: "Reverse Osmosis Plant",
     src: "/ro-plant.png",
-    content: <DummyContent />,
+    content: "Hello",
   },
   {
     category: "",
     title: "DM Water Plant",
     src: "/frp.jpg",
-    content: <DummyContent />,
+    content: "Hello",
   },
   {
     category: "",
     title: "Blowing Machine",
     src: "/Blowing-machine.jpg",
-    content: <DummyContent />,
+    content: "Hello",
   },
   {
     category: "Product",
     title: "BOPP Machine",
     src: "/BOPP-machine.jpg",
-    content: <DummyContent />,
+    content: "Hello",
   },
   
 ];
